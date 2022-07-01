@@ -1,8 +1,9 @@
 import { useStorage } from "@plasmohq/storage"
+import { StorageKeyPrivateAddress, StorageKeyTeamUuids } from "./background/helper"
 
 function IndexPopup() {
-  const [privateAddress, setPrivateAddress] = useStorage("private_address", "")
-  const [teamUuids, setTeamUuids] = useStorage("team_uuids", "")
+  const [privateAddress, setPrivateAddress] = useStorage(StorageKeyPrivateAddress, "")
+  const [teamUuids, setTeamUuids] = useStorage(StorageKeyTeamUuids, "")
 
   return (
     <div
