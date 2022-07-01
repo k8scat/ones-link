@@ -17,7 +17,7 @@
 
 ### 安装
 
-在 [GitHub Release](https://github.com/articli-dev/Articli/releases) 页面下载最新版本的浏览器插件压缩包，本地解压后，在浏览器中安装（需要打开插件的开发者模式）。
+在 [GitHub Release](https://github.com/k8scat/ones-link/releases) 页面下载最新版本的浏览器插件压缩包，本地解压后，在浏览器中安装（需要打开插件的开发者模式）。
 
 ### 配置说明
 
