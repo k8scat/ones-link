@@ -43,13 +43,12 @@ export const beforeNaviCallback = (details: chrome.webNavigation.WebNavigationPa
     const url = details.url
     
     chrome.storage.sync.get([StorageKeyPrivateAddress, StorageKeyTeamUuids]).then((value) => {
-        let addr = parseAddr(value[StorageKeyPrivateAddress])
+        const addr = parseAddr(value[StorageKeyPrivateAddress])
         if (addr === "" || url.startsWith(addr)) {
             return
         }
 
-        let teamUuids = parseTeamUuids(value[StorageKeyTeamUuids])
-        
+        const teamUuids = parseTeamUuids(value[StorageKeyTeamUuids])        
         let items = url.split("/")
         const teamUuid = items[6]
         console.log("teamUuid in url:", teamUuid)
