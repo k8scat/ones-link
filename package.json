@@ -1,7 +1,7 @@
 {
   "name": "ones-link",
   "displayName": "ONES Link",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "当 ONES 团队从公有云迁移到私有云时，帮助用户自动地从旧地址跳转到新地址上。",
   "author": "k8scat",
   "scripts": {
