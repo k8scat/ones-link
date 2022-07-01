@@ -1,0 +1,42 @@
+name: "Release"
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Cache pnpm modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 7.1.0
+          run_install: true
+      
+      - name: Build and zip extension artifact
+        run: |
+          pnpm build -- --zip
+      
+      - name: Release info
+        id: release
+        run: |
+          echo "::set-output name=version::${GITHUB_REF/refs\/tags\//}"
+      
+      - name: Create release and upload assets
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "${{ steps.release.outputs.version }}"
+          prerelease: false
+          files: |
+            build/chrome-mv3-prod.zip
