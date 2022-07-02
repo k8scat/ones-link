@@ -23,16 +23,16 @@ jobs:
           version: 7.1.0
           run_install: true
       
-      - name: Build and zip extension artifact
-        run: |
-          pnpm build -- --zip
-          mv build/chrome-mv3-prod.zip build/chrome-mv3-prod-${{ steps.release.outputs.version }}.zip
-      
       - name: Release info
         id: release
         run: |
           echo "::set-output name=version::${GITHUB_REF/refs\/tags\//}"
-      
+
+      - name: Build and zip extension artifact
+        run: |
+          pnpm build -- --zip
+          mv build/chrome-mv3-prod.zip build/chrome-mv3-prod-${{ steps.release.outputs.version }}.zip
+
       - name: Create release and upload assets
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
