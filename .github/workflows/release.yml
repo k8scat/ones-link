@@ -26,6 +26,7 @@ jobs:
       - name: Build and zip extension artifact
         run: |
           pnpm build -- --zip
+          mv build/chrome-mv3-prod.zip build/chrome-mv3-prod-${{ steps.release.outputs.version }}.zip
       
       - name: Release info
         id: release
@@ -39,4 +40,4 @@ jobs:
           automatic_release_tag: "${{ steps.release.outputs.version }}"
           prerelease: false
           files: |
-            build/chrome-mv3-prod.zip
+            build/chrome-mv3-prod-${{ steps.release.outputs.version }}.zip
