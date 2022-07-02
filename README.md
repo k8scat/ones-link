@@ -46,3 +46,7 @@ K8sCat <k8scat@gmail.com>
 ## License
 
 [MIT](./LICENSE)
+
+## OSCS
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/k8scat/ones-link.git.svg?size=large)](https://www.murphysec.com/dr/ojcFeUzc6Nh1KTPGWr)
