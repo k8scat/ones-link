@@ -17,6 +17,12 @@
 
 ### 安装
 
+#### Chrome 应用商店
+
+[应用链接](https://chrome.google.com/webstore/detail/ones-link/khodhfmciemcgodoaklfpaoegloicgpj)
+
+#### 压缩包
+
 在 [GitHub Release](https://github.com/k8scat/ones-link/releases) 页面下载最新版本的浏览器插件压缩包，本地解压后，在浏览器中安装（需要打开插件的开发者模式）。
 
 ### 配置说明
