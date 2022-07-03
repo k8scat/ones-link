@@ -1,8 +1,11 @@
 # ONES Link
 
+**帮助客户无缝地从公有云迁移到私有部署。**
+
 为什么会做这个插件？主要在于 ONES 团队在从公有云迁移到私有部署后，现存所有记录中存在的链接地址仍然指向的是公有云的地址，而不是迁移后私有部署的地址，这将导致每次访问都需要手动修改一下链接地址。
 
-[ONES Link](https://github.com/k8scat/ones-link) 的目标就是：当 ONES 团队从公有云迁移到私有云后，在访问 ONES 系统时帮助用户自动地从旧地址跳转到新地址上。
+[ONES Link](https://github.com/k8scat/ones-link) 的目标就是：当 ONES 团队从公有云迁移到私有部署后，在访问 ONES 系统
+时帮助用户自动地从旧地址跳转到新地址上。
 比如，迁移前某个 wiki 页面的地址是 [https://ones.ai/wiki/#/team/a1b2c3d4/page/e5f6g7h8](https://ones.ai/wiki/#/team/a1b2c3d4/page/e5f6g7h8)，
 迁移后私有部署的 ONES 地址是 [https://ones.example.com](https://ones.example.com)，
 那么，该插件将会帮助用户自动地跳转到新地址上，即 [https://ones.example.com/wiki/#/team/a1b2c3d4/page/e5f6g7h8](https://ones.example.com/wiki/#/team/a1b2c3d4/page/e5f6g7h8)，
